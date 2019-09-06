@@ -6,7 +6,7 @@ use Tests\TestCase;
 use App\Book;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class BookReservationTest extends TestCase
+class BookManagementTest extends TestCase
 {
 
     use RefreshDatabase;
