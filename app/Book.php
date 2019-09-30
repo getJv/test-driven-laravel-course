@@ -13,9 +13,10 @@ class Book extends Model
         return '/books/' . $this->id . '-' . \Str::slug($this->title); 
     }
 
-    public function checkout($user){
+    public function checkout($user)
+    {
         $this->reservations()->create([
-            'user_id'        => $user->id,
+            'user_id' => $user->id,
             'checked_out_at' => now(),
         ]);
     }
