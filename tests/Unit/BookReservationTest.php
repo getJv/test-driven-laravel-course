@@ -42,5 +42,18 @@ class BookReservationTest extends TestCase
         $this->assertEquals(now(),Reservation::first()->checked_in_at);
         
     }
+
+    /** @test */
+    public function if_not_checked_out_exception_is_thrown()
+    {
+        
+        $this->expectException(\Exception::class);
+        $book = factory(Book::class)->create();
+        $user = factory(User::class)->create();
+        $book->checkin($user);
+        
+    }
+
+
     
 }
