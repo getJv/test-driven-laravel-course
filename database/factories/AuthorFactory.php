@@ -9,5 +9,6 @@ $factory->define(Author::class, function (Faker $faker) {
     return [
         'name'  => $faker->name,
         'dob'   => now()->subYears(10),
+
     ];
 });
