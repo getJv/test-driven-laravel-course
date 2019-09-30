@@ -3,9 +3,11 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use App\Book;
 use App\User;
+use App\Book;
 use App\Reservation;
+use Illuminate\Foundation\Testing\WithFaker;
+
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class BookReservationTest extends TestCase
@@ -54,6 +56,4 @@ class BookReservationTest extends TestCase
         
     }
 
-
-    
 }
