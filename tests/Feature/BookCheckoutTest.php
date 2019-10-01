@@ -8,7 +8,6 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class BookCheckoutTest extends TestCase
@@ -34,7 +33,7 @@ class BookCheckoutTest extends TestCase
     public function only_signed_in_users_can_checkout_a_book()
     {
 
-        //$this->withoutExceptionHandling();
+       // $this->withoutExceptionHandling();
         $book = factory(Book::class)->create();
         $this->post('/checkout/' . $book->id)->assertRedirect('/login');
         $this->assertCount(0, Reservation::all());
