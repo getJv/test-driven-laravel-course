@@ -18,8 +18,11 @@ class BookReservationTest extends TestCase
     /** @test */
     public function a_book_can_be_checked_out()
     {
+        
+        
         $book = factory(Book::class)->create();
         $user = factory(User::class)->create();
+
         $this->assertCount(0,Reservation::all());
         $book->checkout($user);
         $this->assertCount(1,Reservation::all());
