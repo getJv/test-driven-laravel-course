@@ -16,7 +16,7 @@ class AuthorManagementTest extends TestCase
     /** @test */
     public function an_author_can_be_created()
     {
-        $this->withoutExceptionHandling();
+        //$this->withoutExceptionHandling();
         $this->post('/author',[
             'name' => 'Paulo Coelho',
             'dob' => '05/14/1988'
